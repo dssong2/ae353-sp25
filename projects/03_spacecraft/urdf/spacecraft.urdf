@@ -151,21 +151,21 @@
   <joint name="bus_to_wheel_1" type="continuous">
     <parent link="bus"/>
     <child link="wheel_1"/>
-    <origin xyz="0.95262794 1.65000000 1.10000000" rpy="1.04719755 0.00000000 2.61799388"/>
+    <origin xyz="0.53653217 0.92930098 1.92055537" rpy="0.50951799 0.00000000 2.61799388"/>
     <axis xyz="0.00000000 0.00000000 1.00000000"/>
     <limit effort="1000.0" velocity="1000.0"/>
   </joint>
   <joint name="bus_to_wheel_2" type="continuous">
     <parent link="bus"/>
     <child link="wheel_2"/>
-    <origin xyz="-1.90525589 0.00000000 1.10000000" rpy="1.04719755 0.00000000 4.71238898"/>
+    <origin xyz="-1.07306435 0.00000000 1.92055537" rpy="0.50951799 0.00000000 4.71238898"/>
     <axis xyz="0.00000000 0.00000000 1.00000000"/>
     <limit effort="1000.0" velocity="1000.0"/>
   </joint>
   <joint name="bus_to_wheel_3" type="continuous">
     <parent link="bus"/>
     <child link="wheel_3"/>
-    <origin xyz="0.95262794 -1.65000000 1.10000000" rpy="1.04719755 0.00000000 6.80678408"/>
+    <origin xyz="0.53653217 -0.92930098 1.92055537" rpy="0.50951799 0.00000000 6.80678408"/>
     <axis xyz="0.00000000 0.00000000 1.00000000"/>
     <limit effort="1000.0" velocity="1000.0"/>
   </joint>
@@ -179,36 +179,36 @@
   <joint name="bus_to_mass_1" type="fixed">
     <parent link="bus"/>
     <child link="mass_1"/>
-    <origin xyz="0.00000000 0.00000000 -0.27500000" rpy="0.00000000 0.00000000 0.00000000"/>
+    <origin xyz="0.00000000 0.00000000 -0.89041652" rpy="0.00000000 0.00000000 0.00000000"/>
   </joint>
   <joint name="bus_to_mass_2" type="fixed">
     <parent link="bus"/>
     <child link="mass_2"/>
-    <origin xyz="-0.00000003 0.00000003 0.00000000" rpy="0.00000000 0.00000000 0.00000000"/>
+    <origin xyz="-0.00000001 0.00000001 0.00000000" rpy="0.00000000 0.00000000 0.00000000"/>
   </joint>
   <joint name="bus_to_mass_3" type="fixed">
     <parent link="bus"/>
     <child link="mass_3"/>
-    <origin xyz="0.00000003 -0.00000003 -0.00000000" rpy="0.00000000 0.00000000 0.00000000"/>
+    <origin xyz="0.00000001 -0.00000001 -0.00000000" rpy="0.00000000 0.00000000 0.00000000"/>
   </joint>
   <joint name="bus_to_mass_4" type="fixed">
     <parent link="bus"/>
     <child link="mass_4"/>
-    <origin xyz="-0.00000001 0.00000000 0.00000001" rpy="0.00000000 0.00000000 0.00000000"/>
+    <origin xyz="0.00000003 0.00000000 0.00000003" rpy="0.00000000 0.00000000 0.00000000"/>
   </joint>
   <joint name="bus_to_mass_5" type="fixed">
     <parent link="bus"/>
     <child link="mass_5"/>
-    <origin xyz="0.00000001 -0.00000000 -0.00000001" rpy="0.00000000 0.00000000 0.00000000"/>
+    <origin xyz="-0.00000003 -0.00000000 -0.00000003" rpy="0.00000000 0.00000000 0.00000000"/>
   </joint>
   <joint name="bus_to_mass_6" type="fixed">
     <parent link="bus"/>
     <child link="mass_6"/>
-    <origin xyz="0.00000000 0.00000002 0.00000002" rpy="0.00000000 0.00000000 0.00000000"/>
+    <origin xyz="0.00000000 0.00000003 0.00000003" rpy="0.00000000 0.00000000 0.00000000"/>
   </joint>
   <joint name="bus_to_mass_7" type="fixed">
     <parent link="bus"/>
     <child link="mass_7"/>
-    <origin xyz="-0.00000000 -0.00000002 -0.00000002" rpy="0.00000000 0.00000000 0.00000000"/>
+    <origin xyz="-0.00000000 -0.00000003 -0.00000003" rpy="0.00000000 0.00000000 0.00000000"/>
   </joint>
 </robot>
