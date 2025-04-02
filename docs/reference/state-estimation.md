@@ -102,6 +102,17 @@ $$y = o - g(m_e, n_e).$$
 
 Note that $y$ measures the *difference* between what the sensor measurements are and what these measurements would be if the system were at equilibrium. In particular, the output is *zero* when the system is at equilibrium even if the measurements are not.
 
+{: .note}
+> We could define the variable
+>
+> $$ o_e = g(m_e, n_e) $$
+>
+> to represent, more concisely, what the sensor measurements would be if the system were at equilibrium. With this new variable, we could define the output more simply as
+>
+> $$y = o - o_e.$$
+>
+> It is important to understand, however, that $o_e$ is **not** an "equilibrium value" in the same way that $m_e$ and $n_e$ are. The key difference is that $m_e$ and $n_e$ are **chosen**, while $o_e$ is **computed** (by evaluating the function $g$ at $m_e$ and $n_e$).
+
 **Step 3.** Compute $C$ and $D$ as follows:
 
 $$
@@ -194,7 +205,8 @@ $$
 y
 &= o - g\left( \begin{bmatrix} q_e \\ v_e \end{bmatrix}, \begin{bmatrix} \tau_e \end{bmatrix} \right) \\
 &= \begin{bmatrix} q \end{bmatrix} - \begin{bmatrix} q_e \end{bmatrix} \\
-&= \begin{bmatrix} q - q_e \end{bmatrix}.
+&= \begin{bmatrix} q - q_e \end{bmatrix} \\
+&= \begin{bmatrix} q - (\pi / 2) \end{bmatrix} .
 \end{aligned}
 $$
 
@@ -224,7 +236,7 @@ y &= Cx + Du \\
 \end{aligned}
 $$
 
-Note that the original sensor model was linear, so there was no approximation here. We could probably have skipped the entire process of linearization and written the system in state-space form bny inspection. However, just as was true when putting dynamic models in state-space form (see [example](state-space-models#example-first-order)), it is nice to know that "linearization" still works even in this simple case.
+Note that the original sensor model was linear, so there was no approximation here. We could probably have skipped the entire process of linearization and written the system in state-space form by inspection. However, just as was true when putting dynamic models in state-space form (see [example](state-space-models#example-first-order)), it is nice to know that "linearization" still works even in this simple case.
 
 ### Example (nonlinear sensor model)
 
@@ -249,7 +261,8 @@ $$
 y
 &= o - g\left( \begin{bmatrix} q_e \\ v_e \end{bmatrix}, \begin{bmatrix} \tau_e \end{bmatrix} \right) \\
 &= \begin{bmatrix} \cos q / \sin q \end{bmatrix} - \begin{bmatrix} \cos q_e / \sin q_e \end{bmatrix} \\
-&= \begin{bmatrix} (\cos q / \sin q) - (\cos q_e / \sin q_e) \end{bmatrix}.
+&= \begin{bmatrix} (\cos q / \sin q) - (\cos q_e / \sin q_e) \end{bmatrix} \\
+&= \begin{bmatrix} \cos q / \sin q \end{bmatrix}.
 \end{aligned}
 $$
 
