@@ -12,7 +12,7 @@ import umsgpack
 class Simulator:
     def __init__(
             self,
-            dt=0.01,
+            dt=0.04,
             display=True,
             display_pybullet=False,
             seed=None,
@@ -543,7 +543,7 @@ class Simulator:
         self.data['wheel_2_velocity'].append(v[1])
         self.data['wheel_3_velocity'].append(v[2])
         self.data['wheel_4_velocity'].append(v[3])
-        self.data['star_meas'].append(star_meas)
+        self.data['star_meas'].append(star_meas.tolist())
         for key in self.variables_to_log:
             val = getattr(controller, key, np.nan)
             if not np.isscalar(val):
@@ -614,9 +614,13 @@ class Simulator:
 
         return rgba_world
     
+    def set_snapshot_size(self, width, height):
+        self.width = width
+        self.height = height
+
     def meshcat_snapshot(self):
         # Get image from visualizer
-        rgba = np.asarray(self.vis.get_image())
+        rgba = np.asarray(self.vis.get_image(self.width, self.height))
 
         # Shrink width and height to be multiples of 16
         height, width, channels = rgba.shape
