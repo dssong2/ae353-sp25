@@ -16,7 +16,7 @@ class Controller:
         return [0., 1., 0.]
 
     def reset(self, p_x, p_y, p_z, yaw):
-        time.sleep(1.)
+        # time.sleep(1.)
         pass
 
     def run(self, pos_markers, pos_ring, dir_ring, is_last_ring, pos_others):
